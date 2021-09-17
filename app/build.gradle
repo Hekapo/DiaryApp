@@ -38,13 +38,14 @@ android {
 
 dependencies {
 
-
+    //Realm
+    implementation 'io.realm:android-adapters:2.1.0'
     implementation 'io.realm:realm-annotations:10.8.0'
     implementation 'io.realm:realm-android-kotlin-extensions:10.8.0'
     implementation 'io.realm:realm-android-library:10.8.0'
     implementation 'io.realm:realm-gradle-plugin:10.8.0'
 
-
+    // Fragment
     implementation 'androidx.fragment:fragment-ktx:1.4.0-alpha09'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
