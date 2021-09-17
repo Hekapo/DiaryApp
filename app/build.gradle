@@ -1,7 +1,8 @@
-plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
-}
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: "kotlin-parcelize"
+apply plugin: 'kotlin-kapt'
+apply plugin: 'realm-android'
 
 android {
     compileSdk 31
@@ -36,6 +37,12 @@ android {
 }
 
 dependencies {
+
+
+    implementation 'io.realm:realm-annotations:10.8.0'
+    implementation 'io.realm:realm-android-kotlin-extensions:10.8.0'
+    implementation 'io.realm:realm-android-library:10.8.0'
+    implementation 'io.realm:realm-gradle-plugin:10.8.0'
 
 
     implementation 'androidx.fragment:fragment-ktx:1.4.0-alpha09'
