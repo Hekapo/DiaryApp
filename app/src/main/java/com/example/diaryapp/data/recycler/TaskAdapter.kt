@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.graphics.BlendModeColorFilterCompat
 import androidx.core.graphics.BlendModeCompat
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.diaryapp.data.model.Task
 import com.example.diaryapp.databinding.OneHourItemBinding
@@ -60,6 +61,13 @@ class TaskAdapter(task: RealmResults<Task>) :
 
     override fun getItemCount(): Int {
         return oldTaskList.size
+    }
+
+    fun setData(newHabitList: List<Task>) {
+        val diffUtil = TaskDiffUtil(oldTaskList, newHabitList)
+        val diffResults = DiffUtil.calculateDiff(diffUtil)
+        oldTaskList = newHabitList
+        diffResults.dispatchUpdatesTo(this)
     }
 
 }

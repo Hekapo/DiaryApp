@@ -49,6 +49,8 @@ class TaskListFragment : Fragment() {
                     DividerItemDecoration.VERTICAL
                 )
             )
+            todoAdapter.setData(task)
+
 
         }
     }
