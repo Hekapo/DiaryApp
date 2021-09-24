@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import com.example.diaryapp.data.model.Task
 import com.example.diaryapp.data.recycler.TaskAdapter
 import com.example.diaryapp.databinding.FragmentTaskListBinding
+import io.realm.Realm
 import io.realm.RealmResults
 
 class TaskListFragment : Fragment() {
@@ -20,6 +21,7 @@ class TaskListFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Realm.init(requireContext())
 
 
     }
