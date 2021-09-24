@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    tools:context=".views.fragments.task_detail_fragment.TaskDetailsFragment">
+    tools:context=".views.fragments.task_details_fragment.TaskDetailsFragment">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
